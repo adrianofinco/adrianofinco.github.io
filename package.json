@@ -1,0 +1,34 @@
+{
+  "name": "adrianofinco.github.io",
+  "version": "1.0.0",
+  "description": "My portfolio website",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "clean-css-cli": "^4.3.0",
+    "del-cli": "^3.0.1",
+    "html-minifier": "^4.0.0",
+    "tailwindcss": "^1.8.12",
+    "vue": "^2.6.12"
+  },
+  "scripts": {
+    "tw:build": "tailwind build src/css/tailwind.css -o _site/assets/tailwind.css",
+    "tw:clean": "TAILWINDPURGE=true tailwind build src/css/tailwind.css -o _site/assets/tailwind.css && cleancss -O1 specialComments:0 -o _site/assets/tailwind.css _site/assets/tailwind.css",
+    "11ty:serve": "eleventy --serve",
+    "11ty:build": "eleventy",
+    "11ty:rebuild": "del _site && ELEVENTY_PRODUCTION=true eleventy",
+    "release": "npm run 11ty:rebuild && npm run tw:clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianofinco/adrianofinco.github.io.git"
+  },
+  "keywords": [],
+  "author": "Adriano Lourenço",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrianofinco/adrianofinco.github.io/issues"
+  },
+  "homepage": "https://github.com/adrianofinco/adrianofinco.github.io#readme"
+}
