@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <title> Adriano Lourenço ·  </title>
+  <meta name="description" content="Hi i'm Adriano a web developer and student with love for a love jamstack applications, if you like any of my projects feel free to contact me."/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/assets/tailwind.css" />
+  <script src="/assets/vue.js" defer></script>
+  
+  <script src="/assets/app.js" defer></script>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div id="root" class="">
+    <header id="header" class="p-4 relative z-50 flex justify-between items-center">
+      <h1 class="font-bold text-2xl">
+        <a href="/">Adriano Lourenço</a>
+      </h1>
+      <nav id="nav" :class="{ 'open': navOpen }">
+        <button @click="navOpen = !navOpen">
+          <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="triple-bar text-black h-6 w-6 block">
+            <path class="hide" d="M0  3h20v2H0V3z"></path>
+            <path class="rotate-left" d="M0  9h20v2H0V9z"></path>
+            <path class="rotate-right" d="M0  9h20v2H0V9z"></path>
+            <path class="hide" d="M0 15h20v2H0v9z"></path>
+          </svg>
+          
+          <span></span>
+        </button>
+      </nav>
+    </header>
+    <aside class="z-50 w-full h-full bg-white fixed text-lg p-8 pl-12 font-bold border-l border-gray-600 
+    transition-transform transform duration-500" :class="navOpen ? '-translate-x-px' : 'translate-x-full'">
+      <a class="block mb-8" href="#">Articles</a>
+      <a class="block mb-8" href="#">Projects</a>
+      <a class="block mb-8" href="#">UI desgins</a>
+    </aside>
+    <main id="main" class="">
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      aaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+      
+    </main>  
+    <footer id="footer" class="">
+
+    </footer>
+  </div>
+</body>
+</html>

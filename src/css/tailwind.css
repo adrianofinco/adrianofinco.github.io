@@ -1,0 +1,46 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@tailwind screens;
+
+@layer base {
+  body {
+    @apply text-black antialiased bg-white leading-tight font-sans;
+  }
+  *, button:focus {
+    outline-color: rgb(128, 90, 213);
+  }
+  ::selection {
+    @apply text-white bg-purple-600;
+  }
+}
+
+@layer components {
+  svg.triple-bar path {
+    transition: transform .5s, opacity .5s;
+    @apply origin-center;
+  }
+  .open svg.triple-bar path.rotate-left {
+    transform: rotate(45deg);
+    @apply origin-center;
+  }
+  .open svg.triple-bar path.rotate-right {
+    transform: rotate(-45deg);
+    @apply origin-center;
+  }
+  .open svg.triple-bar path.hide {
+    @apply opacity-0;
+  }
+}
+
+@layer utilities {
+  .w-inherit {
+    with: inherit;
+  }
+  .h-inherit {
+    height: inherit;
+  }
+}

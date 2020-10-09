@@ -9,13 +9,15 @@
     "clean-css-cli": "^4.3.0",
     "del-cli": "^3.0.1",
     "html-minifier": "^4.0.0",
-    "tailwindcss": "^1.8.12"
+    "tailwindcss": "^1.8.12",
+    "vue": "^2.6.12"
   },
   "scripts": {
-    "tw:build": "tailwind build src/css/tailwind.css -o _site/tailwind.css",
-    "tw:clean": "TAILWINDPURGE=true tailwind build src/css/tailwind.css -o _site/tailwind.css && cleancss -O1 specialComments:0 -o _site/tailwind.css _site/tailwind.css",
+    "tw:build": "tailwind build src/css/tailwind.css -o _site/assets/tailwind.css",
+    "tw:clean": "TAILWINDPURGE=true tailwind build src/css/tailwind.css -o _site/assets/tailwind.css && cleancss -O1 specialComments:0 -o _site/assets/tailwind.css _site/assets/tailwind.css",
     "11ty:serve": "eleventy --serve",
-    "11ty:build": "del _site && ELEVENTY_PRODUCTION=true eleventy",
+    "11ty:build": "eleventy",
+    "11ty:rebuild": "del _site && ELEVENTY_PRODUCTION=true eleventy",
     "release": "npm run 11ty:build && npm run css:clean"
   },
   "repository": {

@@ -3,7 +3,11 @@ const htmlmin = require("html-minifier");
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(true);
 
-  // eleventyConfig.addPassthroughCopy({"./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",});
+  eleventyConfig.addPassthroughCopy({"./src/img": "./assets/img",});
+
+  eleventyConfig.addPassthroughCopy({"./src/js/app.js": "./assets/app.js",});
+
+  eleventyConfig.addPassthroughCopy({"./node_modules/vue/dist/vue.min.js": "./assets/vue.js",});
 
   eleventyConfig.addShortcode("version", function () { return String(Date.now()); });
 

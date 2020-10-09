@@ -15,10 +15,19 @@ module.exports = {
     }
   },
   theme: {
+    container: {
+      center: true,
+      padding: '1.5rem'
+    },
     fontFamily: {
       sans: ['Roboto', 'Helvetica', 'Arial', 'sans-serif']
     },
-    extend: {},
+    extend: {
+      cursor: {
+        'zoom-in': 'zoom-in',
+        'zoom-out': 'zoom-out'
+      }
+    },
   },
   variants: {},
   plugins: [],
