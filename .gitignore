@@ -1,3 +1,4 @@
+_site/*
 *.pdf
 *.json.ignore
 
