@@ -19,10 +19,10 @@ module.exports = {
       center: true,
       padding: '1.5rem'
     },
-    fontFamily: {
-      sans: ['Roboto', 'Helvetica', 'Arial', 'sans-serif']
-    },
     extend: {
+      fontFamily: {
+        sans: ['Roboto', 'Helvetica', 'Arial', 'sans-serif']
+      },
       cursor: {
         'zoom-in': 'zoom-in',
         'zoom-out': 'zoom-out'

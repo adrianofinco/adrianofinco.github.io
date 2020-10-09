@@ -5,12 +5,11 @@
 <html lang="pt-BR">
 <head>
   <title> Adriano Lourenço · {{ title }} </title>
-  <meta name="description" content="Hi i'm Adriano a web developer and student with love for a love jamstack applications, if you like any of my projects feel free to contact me."/>
+  <meta name="description" content="{{ meta.description }}"/>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height"/>
   <link rel="stylesheet" href="/assets/tailwind.css" />
   <script src="/assets/vue.js" defer></script>
-  {# <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script> #}
   <script src="/assets/app.js" defer></script>
   <style>
 
@@ -25,20 +24,23 @@
       <nav id="nav" :class="{ 'open': navOpen }">
         <button class="sm:hidden" @click="navOpen = !navOpen">
           <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="triple-bar text-black h-6 w-6 block">
-            <path class="hide" d="M0  3h20v2H0V3z"></path>
-            <path class="rotate-left" d="M0  9h20v2H0V9z"></path>
-            <path class="rotate-right" d="M0  9h20v2H0V9z"></path>
+            <path class="hide" d="M0 3h20v2H0V3z"></path>
+            <path class="rotate-left" d="M0 9h20v2H0V9z"></path>
+            <path class="rotate-right" d="M0 9h20v2H0V9z"></path>
             <path class="hide" d="M0 15h20v2H0v9z"></path>
           </svg>
         </button>
-        <ul class="">
-          {%- for post in collections.navigation -%}
-            <li class="inline-block text-gray-600 hover:underline mx-2 text-lg">
-              <a href="{{ post.url }}">
-                {{ post.data.title }}
+        <ul class="hidden sm:block">
+          {%- for entry in collections.navigation -%}
+            <li class="inline-block hover:underline mx-2 text-lg {{ 'text-gray-800' if page.url == entry.url else 'text-gray-600' }}">
+              <a href="{{ entry.url }}">
+                {{ entry.data.title }}
               </a>
             </li>
           {%- endfor -%}
+          <li class="inline-block text-gray-600 hover:underline mx-2 text-lg">
+            <a title="Download my resume" download="{{ contact.resume.filename }}" class="block mb-8 hover:underline" href="{{ contact.resume.url }}">Resume</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -47,16 +49,18 @@
       {%- for post in collections.navigation -%}
         <a class="block mb-8 hover:underline" href="{{ post.url }}">{{ post.data.title }}</a>
       {%- endfor -%}
+      <a title="Download my resume" download="{{ resume.filename }}" class="block mb-8 hover:underline" href="{{ resume.url }}">Resume</a>
     </aside>
-    <main id="main" class="container max-w-5xl my-4 flex-grow">
+    <main id="main" class="container max-w-4xl my-4 flex-grow">
       {{ content | safe }}
     </main>
     <hr>
     <footer id="footer" class="px-4 pt-2 pb-8 grid grid-cols-1 leading-normal sm:grid-cols-2 mx-auto">
       <section>
         <h2 class="font-bold text-lg mt-2">Contact</h2>
-        <a class="text-blue-600 hover:underline" target="_blank" href="{{ social.github }}">Github</a> <br>
-        <a class="text-blue-600 hover:underline" target="_blank" href="mailto:{{ social.email }}">{{ social.email }}</a>
+        <a class="text-blue-600 hover:underline" target="_blank" href="{{ contact.linkedin }}">Linkedin</a> <br>
+        <a class="text-blue-600 hover:underline" target="_blank" href="{{ contact.github }}">Github</a> <br>
+        <a class="text-blue-600 hover:underline" href="mailto:{{ contact.email }}">{{ contact.email }}</a> <br>
       </section>
 
       <section>
@@ -75,11 +79,14 @@
         </p>
       </section>
     </footer>
-    <div id="zoomContainer" class="z-40 fixed top-0 w-screen h-screen bg-black bg-opacity-75 flex flex-col justify-center cursor-zoom-out" 
-      v-show="zoom.open" @click="zoomClose">
+    <div v-show="zoom.open" id="zoomContainer" @click="zoomClose"
+    class="z-40 fixed top-0 w-screen h-screen bg-black bg-opacity-75 flex flex-col justify-center cursor-zoom-out">
       <img class="w-inherit h-inherit object-contain" :src="zoom.image">
     </div>
   </div>
-  
+
+  <script> 
+    document.getElementById('zoomContainer').style.display = "none"
+  </script>
 </body>
 </html>

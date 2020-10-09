@@ -3,3 +3,38 @@ title: 'About me'
 permalink: '/about/'
 ---
 
+<section class="text-lg leading-7 sm:leading-normal max-w-2xl mx-auto">
+  <h2 class="text-2xl mb-4">Hello, I'm Adriano</h2>
+  <p class="text-lg text-gray-800 font-mono mb-4">/aad•ree•aa•no/</p>
+
+  <p class="mb-2">
+    I'm a <b>Fullstack Web Developer</b> and <b>Student</b> with a special interest for <em>utility first CSS</em>.
+    I love working on challenging projects as they provided the opportunity for me to grow as a developer.
+  </p>
+
+  <p class="mb-2">
+    I currently do mostly <b>Frontend</b> drawing user interfaces
+    <b class="bg-opacity-25 px-1 pt-1 bg-teal-500 text-teal-500">Tailwind</b> 
+    and creating interactive pages using 
+    <b class="bg-opacity-25 px-1 pt-1 bg-green-500 text-green-500">Vue</b>,     
+    but when is necessary i also do the <b>Backend</b> including static serving and api endpoints with
+    <b class="bg-opacity-25 px-1 pt-1 bg-red-600 text-red-600">Express</b>
+    {# , data storage with 
+    <b class="bg-opacity-25 px-1 pt-1 bg-green-700 text-green-700">MongoDB</b> and handling authentication using
+    <b class="bg-opacity-25 px-1 pt-1 bg-blue-500 text-blue-500">PassportJS</b>#}.
+  </p>
+
+  <p class="mb-2">
+    Want to see more? Checkout my projects <a class="text-blue-600 hover:underline" href="/">here</a> or at my
+    <a class="text-blue-600 hover:underline" target="_blank" href="{{ contact.github }}">Github account</a>.
+    You can also download my 
+    <a class="text-blue-600 hover:underline" download="{{ contact.resume.filename }}" href="{{ contact.resume.url }}">
+      resume</a>.
+  </p>
+
+  <p class="mb-2">
+    For contact send an email to 
+    <a class="text-blue-600 hover:underline" href="mailto:{{ contact.email }}">{{ contact.email }}</a> or message me on
+    <a class="text-blue-600 hover:underline" target="_blank" href="{{ contact.linkedin }}">Linkedin</a>.
+  </p>
+</section>

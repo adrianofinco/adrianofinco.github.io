@@ -34,6 +34,31 @@
   .open svg.triple-bar path.hide {
     @apply opacity-0;
   }
+
+  .divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+  }
+
+  .divider::before, .divider::after {
+    content: ' ';
+    display: block;
+    height: 1px;
+    width: 100%;
+  }
+
+  .divider::after {
+    background: linear-gradient(to left, rgba(240,240,240,0), black);
+    margin-right: 4vh;
+  }
+
+  .divider::before {
+    background: linear-gradient(to right, rgba(240,240,240,0), black);
+    margin-left: 4vh;
+  }
+
 }
 
 @layer utilities {

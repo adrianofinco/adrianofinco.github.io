@@ -3,6 +3,8 @@ const htmlmin = require("html-minifier");
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(true);
 
+  eleventyConfig.addPassthroughCopy({"./src/resume.pdf": "./resume.pdf",});
+
   eleventyConfig.addPassthroughCopy({"./src/img": "./assets/img",});
 
   eleventyConfig.addPassthroughCopy({"./src/js/app.js": "./assets/app.js",});

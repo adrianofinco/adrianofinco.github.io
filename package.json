@@ -18,7 +18,7 @@
     "11ty:serve": "eleventy --serve",
     "11ty:build": "eleventy",
     "11ty:rebuild": "del _site && ELEVENTY_PRODUCTION=true eleventy",
-    "release": "npm run 11ty:build && npm run css:clean"
+    "release": "npm run 11ty:rebuild && npm run tw:clean"
   },
   "repository": {
     "type": "git",

@@ -1,20 +1,7 @@
 [
   {
-    "title": "Portfolio website",
-    "description": "Tested the use of Word2Vec embeddings with a variety of sequential input deep learning models towards the task of language modeling (predicting the next word in a sentence).",
-    "image": "portfolio.jpg",
-    "link": {
-      "code": "https://github.com/adrianofinco/adrianofinco.github.io",
-      "view": "/"
-    },
-    "tech": {
-      "frontend": [ "TailwindCSS", "Vue" ],
-      "built": [ "Eleventy", "Nunjucks" ],
-      "hosted": [ "Github-Pages" ]
-    }
-  }, {
     "title": "Username check",
-    "description": "A webapp for checking availability of a username across multiple websites.",
+    "description": "A webapp that allows to check the availability of a username across multiple websites like instagram, facebook, github, twitter and many more.",
     "image": "unamecheck.jpg",
     "link": {
       "code": "https://github.com/adrianofinco/usernamecheck",
@@ -24,32 +11,6 @@
       "frontend": [ "TailwindCSS", "AlpineJS" ],
       "backend": [ "Express" ],
       "hosted": [ "Heroku" ]
-    }
-  }, {
-    "title": "UI Designs",
-    "description": "Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested Tested ",
-    "image": "proj1.jpg",
-    "link": {
-      "code": "https://github.com/adrianofinco/adrianofinco.github.io",
-      "view": "#"
-    },
-    "tech": {
-      "frontend": [ "TailwindCSS", "Vue" ],
-      "built": [ "Eleventy", "Nunjucks" ],
-      "hosted": [ "Github-Pages" ]
-    }
-  }, {
-    "title": "Simple webstore front",
-    "description": "",
-    "image": "proj1.jpg",
-    "link": {
-      "code": "#",
-      "view": "#"
-    },
-    "tech": {
-      "frontend": [ "TailwindCSS", "Vue" ],
-      "backend": [ "Express" ],
-      "hosted": [ "Netlify" ]
     }
   }
 ]

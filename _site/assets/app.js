@@ -15,5 +15,5 @@ var app = new Vue({
     zoomClose (event) {
       this.zoom.open = false;
     }
-  }  
+  }
 })
