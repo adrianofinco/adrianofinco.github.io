@@ -12,5 +12,17 @@
       "backend": [ "Express" ],
       "hosted": [ "Heroku" ]
     }
+  }, {
+    "title": "UI Group",
+    "description": "A collection of wild and unpredictable user interfaces including user profile pages, dashboards and webapp mockups ",
+    "image": "uigroup.jpg",
+    "link": {
+      "code": "https://github.com/adrianofinco/uigroup",
+      "view": "https://adrianofinco.github.io/uigroup"
+    },
+    "tech": {
+      "frontend": [ "TailwindCSS", "Vue" ],
+      "hosted": [ "Github-Pages" ]
+    }
   }
 ]
