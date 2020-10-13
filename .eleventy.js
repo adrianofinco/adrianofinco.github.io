@@ -9,11 +9,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({"./src/img": "./assets/img",});
 
-  eleventyConfig.addPassthroughCopy({"./src/js/app.js": "./assets/app.js",});
-
   eleventyConfig.addPassthroughCopy({"./node_modules/vue/dist/vue.min.js": "./assets/vue.js",});
-
-  eleventyConfig.addShortcode("version", function () { return String(Date.now()); });
 
   // minify html
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {

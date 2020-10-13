@@ -10,7 +10,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height"/>
   <link rel="stylesheet" href="/assets/tailwind.css" />
   <script src="/assets/vue.js" defer></script>
-  <script src="/assets/app.js" defer></script>
   <style>
 
   </style>
@@ -85,8 +84,21 @@
     </div>
   </div>
 
-  <script> 
-    document.getElementById('zoomContainer').style.display = "none"
-  </script>
+<script> 
+document.getElementById('zoomContainer').style.display = "none"
+window.addEventListener('load', function () {
+var app = new Vue({
+  'el': '#root',
+  data: {
+    navOpen : false,
+    zoom: { open: false, image: "" }
+  },
+  methods: {
+    zoomOpen (event) { this.zoom.image = event.target.src; this.zoom.open = true; },
+    zoomClose (event) { this.zoom.open = false; }
+  }
+})
+})
+</script>
 </body>
 </html>
