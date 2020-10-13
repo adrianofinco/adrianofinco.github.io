@@ -1,0 +1,1 @@
+module.exports = !(process.env.BUILD_ENV || "").startsWith('prod')

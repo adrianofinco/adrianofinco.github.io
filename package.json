@@ -15,12 +15,15 @@
     "vue": "^2.6.12"
   },
   "scripts": {
-    "tw:build": "tailwind build src/css/tailwind.css -o _site/assets/tailwind.css",
-    "tw:clean": "TAILWINDPURGE=true tailwind build src/css/tailwind.css -o _site/assets/tailwind.css && cleancss -O1 specialComments:0 -o _site/assets/tailwind.css _site/assets/tailwind.css",
-    "11ty:serve": "eleventy --serve",
-    "11ty:build": "eleventy",
-    "11ty:rebuild": "del _site && ELEVENTY_PRODUCTION=true eleventy",
-    "release": "npm run 11ty:rebuild && npm run tw:clean"
+    "css:dev": "postcss src/css/tailwind.css -o _site/assets/tailwind.css",
+    "css:watch": "postcss src/css/tailwind.css -o _site/assets/tailwind.css --watch",
+    "css:prod": "BUILD_ENV=prod postcss src/css/tailwind.css -o _site/assets/tailwind.css",
+    "clean": "del _site",
+    "11ty:dev": "eleventy",
+    "11ty:watch": "eleventy --serve",
+    "11ty:prod": "npm run clean && BUILD_ENV=prod eleventy",
+    "startdev": "npm run 11ty:watch && npm run css:watch",
+    "trybuild": "npm run 11ty:prod && npm run css:prod"
   },
   "repository": {
     "type": "git",

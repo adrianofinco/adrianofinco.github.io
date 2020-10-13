@@ -1,10 +1,12 @@
+isDevelopment = require('./devenv.js');
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
   purge: {
-    enabled: process.env.TAILWINDPURGE == "true",
+    enabled: !isDevelopment,
     layers: ['utilities', 'components'],
     content: [
       './_site/**/*.html',

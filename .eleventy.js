@@ -1,5 +1,7 @@
 const htmlmin = require("html-minifier");
 
+isDevelopment = require('./devenv.js');
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(true);
 
@@ -15,11 +17,7 @@ module.exports = function (eleventyConfig) {
 
   // minify html
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    if (
-      process.env.ELEVENTY_PRODUCTION &&
-      outputPath &&
-      outputPath.endsWith(".html")
-    ) {
+    if (!isDevelopment && outputPath && outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
