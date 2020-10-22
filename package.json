@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
     "del-cli": "^3.0.1",
     "html-minifier": "^4.0.0",
@@ -16,12 +17,11 @@
   "scripts": {
     "css:dev": "postcss src/css/tailwind.css -o _site/assets/tailwind.css",
     "css:watch": "postcss src/css/tailwind.css -o _site/assets/tailwind.css --watch",
-    "css:prod": "BUILD_ENV=prod postcss src/css/tailwind.css -o _site/assets/tailwind.css",
+    "css:prod": "cross-env BUILD_ENV=prod postcss src/css/tailwind.css -o _site/assets/tailwind.css",
     "clean": "del _site",
     "11ty:dev": "eleventy",
     "11ty:watch": "eleventy --serve",
-    "11ty:prod": "npm run clean && BUILD_ENV=prod eleventy",
-    "startdev": "npm run 11ty:watch & npm run css:watch",
+    "11ty:prod": "npm run clean && cross-env BUILD_ENV=prod eleventy",
     "trybuild": "npm run 11ty:prod && npm run css:prod"
   },
   "repository": {
