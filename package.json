@@ -15,12 +15,10 @@
     "vue": "^2.6.12"
   },
   "scripts": {
-    "css:dev": "postcss src/css/tailwind.css -o _site/assets/tailwind.css",
-    "css:watch": "postcss src/css/tailwind.css -o _site/assets/tailwind.css --watch",
-    "css:prod": "cross-env BUILD_ENV=prod postcss src/css/tailwind.css -o _site/assets/tailwind.css",
-    "clean": "del _site",
-    "11ty:dev": "eleventy",
-    "11ty:watch": "eleventy --serve",
+    "css:dev": "postcss src/css/tailwind.css -o _site/tailwind.css",
+    "css:prod": "cross-env BUILD_ENV=prod postcss src/css/tailwind.css -o _site/tailwind.css",
+    "clean": "del-cli _site",
+    "11ty:dev": "eleventy --serve",
     "11ty:prod": "npm run clean && cross-env BUILD_ENV=prod eleventy",
     "trybuild": "npm run 11ty:prod && npm run css:prod"
   },

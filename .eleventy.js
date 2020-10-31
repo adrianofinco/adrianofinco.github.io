@@ -7,9 +7,7 @@ module.exports = function (eleventyConfig) {
 
   // eleventyConfig.addPassthroughCopy({"./src/resume.pdf": "./resume.pdf",});
 
-  eleventyConfig.addPassthroughCopy({"./src/img": "./assets/img",});
-
-  eleventyConfig.addPassthroughCopy({"./node_modules/vue/dist/vue.min.js": "./assets/vue.js",});
+  eleventyConfig.addPassthroughCopy({"./src/img": "./img",});
 
   // minify html
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {

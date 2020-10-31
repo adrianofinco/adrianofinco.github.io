@@ -22,8 +22,15 @@ module.exports = {
       padding: '1.5rem'
     },
     extend: {
+      spacing: {
+        fit: 'fit-content'
+      },
+      colors: {
+        dimgrey: "#777777",
+        lightgrey: "#444444"
+      },
       fontFamily: {
-        sans: ['Roboto', 'Helvetica', 'Arial', 'sans-serif']
+        sans: ['Nunito', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
       },
       cursor: {
         'zoom-in': 'zoom-in',

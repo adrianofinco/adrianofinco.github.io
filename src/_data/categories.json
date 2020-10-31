@@ -1,0 +1,26 @@
+{
+  "tailwind": {
+    "name": "Tailwind CSS",
+    "color": "text-teal-500"
+  },
+  "vue": {
+    "name": "Vue",
+    "color": "text-green-500"
+  },
+  "alpine": {
+    "name": "AlpineJS",
+    "color": "text-blue-400"
+  },
+  "express": {
+    "name": "Express",
+    "color": "text-red-600"
+  },
+  "mongodb": {
+    "name": "Mongo DB",
+    "color": "text-green-700"
+  },
+  "passport": {
+    "name": "Passport JS",
+    "color": "text-blue-500"
+  }
+}

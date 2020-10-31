@@ -3,7 +3,10 @@
   "github": "https://github.com/adrianofinco",
   "email": "adriano.finco.509@gmail.com",
   "resume": {
-    "url": "/resume.pdf",
-    "filename": "adriano finco.pdf"
+    "url": {
+      "en": "/resume.pdf",
+      "pt": "/curriculo.pdf"
+    },
+    "filename": "adrianofinco.pdf"
   }
 }

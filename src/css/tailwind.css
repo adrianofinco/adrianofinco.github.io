@@ -8,7 +8,7 @@
 
 @layer base {
   body {
-    @apply text-black antialiased bg-white leading-tight font-sans;
+    @apply text-lightgrey antialiased bg-white leading-tight font-sans;
   }
   *, button:focus {
     outline-color: rgb(128, 90, 213);
