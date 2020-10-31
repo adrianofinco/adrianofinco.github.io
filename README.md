@@ -4,8 +4,8 @@ A portfolio website for my projects, hosted on [github-pages](https://adrianofin
 
 ## My projects:
 ### [usernamecheck](https://usernamecheck.herokuapp.com)
-Webapp for checking availability of a username across multiple websites.
+A webapp that allows to check the availability of a username across multiple websites like instagram, facebook, github, twitter and many more.
 
 ### [uigroup](https://adrianofinco.github.io/uigroup)
-A collection of wild and unpredictable user interfaces, including webapp mockups, dashboards and more.
+A collection of beautiful singular web pages ranging from static mockup pages to simple web apps.
 
