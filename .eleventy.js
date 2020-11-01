@@ -5,7 +5,8 @@ isDevelopment = require('./devenv.js');
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(true);
 
-  // eleventyConfig.addPassthroughCopy({"./src/resume.pdf": "./resume.pdf",});
+  eleventyConfig.addPassthroughCopy({"./src/resume.pdf": "./resume.pdf",});
+  eleventyConfig.addPassthroughCopy({"./src/curriculo.pdf": "./curriculo.pdf",});
 
   eleventyConfig.addPassthroughCopy({"./src/img": "./img",});
 
