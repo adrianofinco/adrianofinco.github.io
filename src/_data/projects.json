@@ -1,24 +1,30 @@
 [
   {
-    "title": "Username check",
-    "description": {
-      "en": "A webapp that allows to check the availability of a username across multiple websites like instagram, facebook, github, twitter and many more.",
-      "pt": "Um aplicativo web que permite a checagem da disponibilidade de um nome de usário através de diversos websites como instagram, facebook, github, twitter e muitos mais."
-    },
-    "image": "unamecheck.jpg",    
-    "repo": "https://github.com/adrianofinco/usernamecheck",
-    "view": "https://usernamecheck.herokuapp.com",
-    "tags": [ "tailwind", "alpine", "express" ]
+    "title": "Task Organizer",
+    "description": "taskorganizer",
+    "repo": "https://github.com/adrianofinco/vue-todo-pwa",
+    "view": "https://adrianofinco.github.io/vue-todo-pwa/",
+    "tags": [ "pwa", "offline-support", "client-storage" ]
   }, {
+    "title": "Username check",
+    "description": "usernamecheck",
+    "image": "unamecheck.jpg",    
+    "repo": "https://github.com/adrianofinco/usernamecheck-webapp",
+    "view": "https://usernamecheck.herokuapp.com",
+    "tags": [ "webapp", "API", "service" ]
+  }, {
+    "title": "Rollstack",
+    "description": "rollstack",
+    "repo": "https://github.com/adrianofinco/rollstack",
+    "view": "https://www.npmjs.com/package/rollstack",
+    "tags": [ "isomorphic", "lib", "NPM" ]
+  },{
     "title": "UI Group",
-    "description": {
-      "en": "A collection of beautiful singular web pages ranging from static mockup pages to simple web apps.",
-      "pt": "Um coleção de belas paginas webs indo de modelos staticos até aplicativos web simples."
-    },
+    "description": "uigroup",
     "logo": "uigroup.svg",
     "image": "uigroup.jpg",
     "repo": "https://github.com/adrianofinco/uigroup",
     "view": "https://adrianofinco.github.io/uigroup",
-    "tags": [ "tailwind", "vue" ]
+    "tags": [ "static", "Design" ]
   }
 ]

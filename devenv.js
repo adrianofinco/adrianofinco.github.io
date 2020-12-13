@@ -1,1 +1,1 @@
-module.exports = !(process.env.BUILD_ENV || "").startsWith('prod')
+module.exports = !(process.argv.includes('BUILD_ENV=production'))

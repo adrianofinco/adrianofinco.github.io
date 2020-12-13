@@ -1,19 +1,13 @@
 isDevelopment = require('./devenv.js');
 
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   purge: {
+    mode: 'all',
+    preserveHtmlElements: false,
+    content: ['_site/**/*.html'],
     enabled: !isDevelopment,
-    layers: ['utilities', 'components'],
-    content: [
-      './_site/**/*.html',
-      './_site/**/*.js'
-    ],
     options: {
-      whitelist: []
+      safelist: ['text-blue-600', 'hover:underline'],
     }
   },
   theme: {
@@ -22,9 +16,6 @@ module.exports = {
       padding: '1.5rem'
     },
     extend: {
-      spacing: {
-        fit: 'fit-content'
-      },
       colors: {
         dimgrey: "#777777",
         lightgrey: "#444444"
@@ -32,12 +23,8 @@ module.exports = {
       fontFamily: {
         sans: ['Nunito', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
       },
-      cursor: {
-        'zoom-in': 'zoom-in',
-        'zoom-out': 'zoom-out'
-      }
     },
   },
   variants: {},
   plugins: [],
-}
+};

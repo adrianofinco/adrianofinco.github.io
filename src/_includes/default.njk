@@ -3,59 +3,40 @@
 ---
 <!doctype html>
 <html lang="{{ lang }}">
-{% set translate = translate[lang | lower] %}
+{% set translate = lang | language %}
 <head>
-  <title>Adriano Lourenço</title>
-  <meta name="description" content="{{ translate['description'] }}"/>
   <meta charset="utf-8"/>
+  <title>Adriano Lourenço</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height"/>
-  <link rel="stylesheet" href="/tailwind.css" />
   <!-- latin regular, semibold, bold -->
-  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofINeaB.woff2">
-  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXW3I6Li01BKofA6sKUYevI.woff2">
-  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXW3I6Li01BKofAjsOUYevI.woff2">
-  <!-- fallback -->
-  <link rel="prefetch" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofINeaB.woff2">
-  <link rel="prefetch" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXW3I6Li01BKofA6sKUYevI.woff2">
-  <link rel="prefetch" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXW3I6Li01BKofAjsOUYevI.woff2">
-  {% for entry in collections.translation %}
-  <link rel="alternate" hreflang="{{ entry.data.text }}" href="{{ entry.url }}">
-  {% endfor %}
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofINeaB.woff2"/>
+  <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXW3I6Li01BKofA6sKUYevI.woff2"/>
+  <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXW3I6Li01BKofAjsOUYevI.woff2"/>
+
+  <link rel="stylesheet" href="/app.css" />
+  <link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"/>
+
+  <meta name="description" content="{{ translate['description'] }}"/>
+  <link rel="alternate" hreflang="en" href="/" />
+  <link rel="alternate" hreflang="pt" href="/pt/" />
 </head>
-<body class="">
+<body>
   <div id="root" class="min-h-screen flex flex-col">
     <header id="header" class="p-4 text-center">
       <h1 class="font-bold text-2xl sm:mb-2">
         <a href="{{ page.url }}">Adriano Lourenço</a>
       </h1>
     </header>
-    <main id="main" class="my-4 flex-grow">
+    <main id="main" class="mt-4 flex-grow">
       <section class="container text-lg max-w-2xl mx-auto pb-6 lg:pb-12">
         <h2 class="text-2xl mb-2 lg:mb-4">{{ translate['heading'] }}</h2>
         <p class="text-lg text-gray-800 font-mono mb-2 lg:mb-4">/aad•ree•aa•no/</p>
-        <p class="mb-2">
-          {{ translate['desc-11'] }} <b>{{ translate['desc-12'] }}</b> 
-          {{ translate['desc-13'] }} <b>{{ translate['desc-14'] }}</b> 
-          {{ translate['desc-15'] }}
-        </p>
-        <p class="mb-2">
-          {{ translate['desc-21'] }} 
-          <a class="text-blue-600 hover:underline" href="#projects">{{ translate['desc-22'] }}</a> 
-          {{ translate['desc-23'] }}
-          <a class="text-blue-600 hover:underline" target="_blank" href="{{ contact.github }}">{{ translate['desc-24'] }}</a>.
-          {{ translate['desc-25'] }}
-          <a class="text-blue-600 hover:underline" download="{{ contact.resume.filename }}" href="{{ contact.resume.url[lang] }}">{{ translate['desc-26'] }}</a>.
-        </p>
-        <p class="mb-2">
-          {{ translate['desc-31'] }}
-          <a class="text-blue-600 hover:underline" href="mailto:{{ contact.email }}">{{ contact.email }}</a> {{ translate['desc-32'] }}
-          <a class="text-blue-600 hover:underline" target="_blank" href="{{ contact.linkedin }}">{{ translate['desc-33'] }}</a>.
-        </p>
+        <p class="mb-2">{{ translate['intro-1'] }}</p>
+        <p class="mb-2">{{ translate['intro-2'] }}</p>
+        <p class="mb-2">{{ translate['intro-3'] }}</p>
       </section>
 
       {% for proj in projects %}
-      {% if not proj.hide %}
       <section id="{{ 'projects' if loop.first }}" class="py-6 lg:py-12 {{ 'bg-gray-200' if loop.index % 2 != 0 }}">
         <div class="container max-w-4xl flex flex-col">
           <header class="flex flex-col items-center mx-auto">
@@ -68,61 +49,53 @@
               <a class="text-lg text-blue-600 mt-2 hover:underline mx-2" href="{{ proj.view }}" target="_blank">{{ translate['view'] }}</a>
             </div>
           </header>
-          <figure class="mt-4 md:mt-8 mb-4 md:mb-8">
+          {% if proj.image %}
+          <figure class="mt-4 md:mt-8">
             <img src="/img/{{ proj.image }}" class="rounded-md shadow-lg">
           </figure>
-          <summary class="ml-2 sm:ml-4 grid grid-flow-row gap-4 lg:gap-24 lg:grid-flow-col max-w-2xl lg:mx-auto text-lg text-lightgrey">  
+          {% endif %}
+          <summary class="mt-4 md:mt-8 ml-2 sm:ml-4 grid grid-flow-row gap-4 lg:gap-24 lg:grid-flow-col max-w-2xl lg:mx-auto text-lg text-lightgrey">  
             <div>
               <h3 class="font-bold lg:mb-4 mb-2 text-dimgrey uppercase">{{ translate['desc'] }}</h3>
-              <p>{{ proj.description[lang] }}</p>
+              <p>{{ translate[proj.description] }}</p>
             </div>
             <div>
               <h3 class="font-bold lg:mb-4 mb-2 text-dimgrey uppercase">{{ translate['tags'] }}</h3>
-              <ul class="font-semibold">
+              <ul class="">
                 {% for tag in proj.tags %}
-                <li class="{{ categories[tag].color }}">{{ categories[tag].name }}</li>
+                <li class="">{{ translate[tag] if translate[tag] else tag }}</li>
                 {% endfor %}
               </ul>
             </div>
           </summary>
         </div>
       </section>
-      {% endif %}
       {% endfor %}
-      {{ content | safe }}
     </main>
     <hr>
     <footer id="footer" class="md:gap-10 px-4 pt-2 pb-8 grid grid-cols-1 leading-normal md:grid-flow-col md:mx-auto">
       <section>
         <h2 class="font-bold text-lg mt-2">{{ translate['contact'] }}</h2>
-        <a class="text-blue-600 hover:underline" target="_blank" href="{{ contact.linkedin }}">Linkedin</a> <br>
-        <a class="text-blue-600 hover:underline" target="_blank" href="{{ contact.github }}">Github</a> <br>
-        <a class="text-blue-600 hover:underline" href="mailto:{{ contact.email }}">{{ contact.email }}</a> <br>
+        <a class="text-blue-600 hover:underline" target="_blank" href="https://linkedin.com/in/adriano-lourenço">Linkedin</a> <br>
+        <a class="text-blue-600 hover:underline" target="_blank" href="https://github.com/adrianofinco">Github</a> <br>
+        <a class="text-blue-600 hover:underline" href="mailto:adriano.finco.509@gmail.com">adriano.finco.509@gmail.com</a> <br>
       </section>
 
       <section>
         <h2 class="font-bold text-lg mt-2">{{ translate['language'] }}</h2>
-        {% for entry in collections.translation %}
-          <p>
-            <span class="align-baseline font-bold text-lg">{{ '> ' if page.url == entry.url }}</span>
-            <a class="text-blue-600 hover:underline" href="{{ entry.url }}">{{ entry.data.text }}</a>
-          </p>
-        {% endfor %}
-      </section>
-
-      <section class="max-w-sm">
-        <h2 class="font-bold text-lg mt-2">{{ translate['webpage'] }}</h2>
-        <p>{{ translate['hosted'] }} <span class="text-black font-bold">Github-Pages</span>.</p>
-        <p class="">
-          {{ translate['icons-1'] }}
-          {% for author, link in copyright %}{% 
-            if not loop.last and not loop.first 
-          %}{{ ', ' }}
-          {% elseif loop.last and not loop.first %}
-            {{ translate['icons-2'] }}
+        <p>
+          {% if lang == 'en' %}
+          <a class="text-gray-600 hover:underline" href="/">English</a>
+          {% else %}
+          <a class="text-blue-600 hover:underline" href="/">English</a>
           {% endif %}
-          <a class="text-blue-600 hover:underline" href="{{ link }}" target="_blank">{{ author }}</a
-          >{% endfor %}
+        </p>
+        <p>
+          {% if lang == 'pt' %}
+          <a class="text-gray-600 hover:underline" href="/pt/">Português</a>
+          {% else %}
+          <a class="text-blue-600 hover:underline" href="/pt/">Português</a>
+          {% endif %}
         </p>
       </section>
     </footer>
