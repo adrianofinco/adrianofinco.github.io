@@ -7,7 +7,7 @@ module.exports = {
     content: ['_site/**/*.html'],
     enabled: !isDevelopment,
     options: {
-      safelist: ['text-blue-600', 'hover:underline'],
+      safelist: [],
     }
   },
   theme: {

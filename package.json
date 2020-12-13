@@ -16,7 +16,7 @@
     "clean": "rd /s /q _site",
     "11ty": "eleventy",
     "11ty:prod": "npm run clean && eleventy -- BUILD_ENV=production",
-    "trybuild": "npm run 11ty:prod && npm run css:prod"
+    "build": "npm run 11ty:prod && npm run css:prod"
   },
   "repository": {
     "type": "git",
