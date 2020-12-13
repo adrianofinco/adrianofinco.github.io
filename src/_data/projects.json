@@ -2,6 +2,8 @@
   {
     "title": "Task Organizer",
     "description": "taskorganizer",
+    "image": "taskorganizer.png",
+    "logo": "taskorganizer.svg",
     "repo": "https://github.com/adrianofinco/vue-todo-pwa",
     "view": "https://adrianofinco.github.io/vue-todo-pwa/",
     "tags": [ "pwa", "offline-support", "client-storage" ]
