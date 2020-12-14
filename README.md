@@ -1,11 +1,21 @@
-# Portfolio website
-
 A portfolio website for my projects, hosted on [github-pages](https://adrianofinco.github.io)
 
-## My projects:
-### [usernamecheck](https://usernamecheck.herokuapp.com)
-A webapp that allows to check the availability of a username across multiple websites like instagram, facebook, github, twitter and many more.
+## Task Organizer
+[View](https://adrianofinco.github.io/vue-todo-pwa/)
+[Source code](https://github.com/adrianofinco/vue-todo-pwa)
+A task list PWA made using Vue and Vuex with support for offline usage including client-side storage of the tasks using the IndexedDB API and asset caching through the Service Worker API.
 
-### [uigroup](https://adrianofinco.github.io/uigroup)
-A collection of beautiful singular web pages ranging from static mockup pages to simple web apps.
+## Username check
+[View](https://usernamecheck.herokuapp.com/)
+[Source code](https://github.com/adrianofinco/usernamecheck-webapp)
+A webapp with a NodeJS + Express backend that allows to check the availability of a username across multiple websites like Instagram, Facebook, Github, Twitter and many more.
 
+## Rollstack
+[View](https://www.npmjs.com/package/rollstack)
+[Source code](https://github.com/adrianofinco/rollstack)
+A isomorphic Javascript library for generating random data including seeds for other generator libraries, integer numbers between a range and strings with configurable length and character set.
+
+## UI Group
+[View](https://adrianofinco.github.io/uigroup)
+[Source code](https://github.com/adrianofinco/uigroup)
+A collection of beautiful singular web pages made with Vue and Tailwind CSS, ranging from mockup pages to simple web games.
