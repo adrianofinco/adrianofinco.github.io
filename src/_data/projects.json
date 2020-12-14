@@ -20,13 +20,5 @@
     "repo": "https://github.com/adrianofinco/rollstack",
     "view": "https://www.npmjs.com/package/rollstack",
     "tags": [ "isomorphic", "lib", "NPM" ]
-  },{
-    "title": "UI Group",
-    "description": "uigroup",
-    "logo": "uigroup.svg",
-    "image": "uigroup.png",
-    "repo": "https://github.com/adrianofinco/uigroup",
-    "view": "https://adrianofinco.github.io/uigroup",
-    "tags": [ "static", "Design" ]
   }
 ]

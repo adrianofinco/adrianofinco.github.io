@@ -13,8 +13,3 @@ A webapp with a NodeJS + Express backend that allows to check the availability o
 [View](https://www.npmjs.com/package/rollstack) / [Source code](https://github.com/adrianofinco/rollstack)
 
 A isomorphic Javascript library for generating random data including seeds for other generator libraries, integer numbers between a range and strings with configurable length and character set.
-
-## UI Group
-[View](https://adrianofinco.github.io/uigroup) / [Source code](https://github.com/adrianofinco/uigroup)
-
-A collection of beautiful singular web pages made with Vue and Tailwind CSS, ranging from mockup pages to simple web games.
