@@ -9,11 +9,9 @@
   <title>Adriano Lourenço</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height"/>
   <!-- latin regular, semibold, bold -->
-  <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXV3I6Li01BKofINeaB.woff2"/>
-  <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v14/XRXW3I6Li01BKofAjsOUYevI.woff2"/>
-
+  <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v16/XRXV3I6Li01BKofINeaB.woff2"/>
+  <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href="https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAjsOUYevI.woff2"/>
   <link rel="stylesheet" href="/app.css" />
-  <link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"/>
 
   <meta name="description" content="{{ translate['description'] }}"/>
   <link rel="alternate" hreflang="en" href="/" />
@@ -62,7 +60,7 @@
               <h3 class="font-bold lg:mb-4 mb-2 text-dimgrey uppercase">{{ translate['tags'] }}</h3>
               <ul class="">
                 {% for tag in proj.tags %}
-                <li class="">{{ translate[tag] if translate[tag] else tag }}</li>
+                <li class="">{{ tag }}</li>
                 {% endfor %}
               </ul>
             </div>

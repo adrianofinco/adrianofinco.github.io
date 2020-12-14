@@ -6,19 +6,19 @@
     "logo": "taskorganizer.svg",
     "repo": "https://github.com/adrianofinco/vue-todo-pwa",
     "view": "https://adrianofinco.github.io/vue-todo-pwa/",
-    "tags": [ "pwa", "offline-support", "client-storage" ]
+    "tags": [ "Vue", "Vuex", "IndexedDB", "Service Worker", "PWA" ]
   }, {
     "title": "Username check",
     "description": "usernamecheck",
     "image": "unamecheck.jpg",    
     "repo": "https://github.com/adrianofinco/usernamecheck-webapp",
     "view": "https://usernamecheck.herokuapp.com",
-    "tags": [ "webapp", "API", "service" ]
+    "tags": [ "Node", "Express" ]
   }, {
     "title": "Rollstack",
     "description": "rollstack",
     "repo": "https://github.com/adrianofinco/rollstack",
     "view": "https://www.npmjs.com/package/rollstack",
-    "tags": [ "isomorphic", "lib", "NPM" ]
+    "tags": [ "Javascript", "NPM" ]
   }
 ]
