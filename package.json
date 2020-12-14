@@ -13,7 +13,7 @@
   "scripts": {
     "css": "postcss src/css/tailwind.css -o _site/app.css",
     "css:prod": "postcss src/css/tailwind.css -o _site/app.css -- BUILD_ENV=production",
-    "clean": "rd /s /q _site",
+    "clean": "del /s /q _site/*",
     "11ty": "eleventy",
     "11ty:prod": "npm run clean && eleventy -- BUILD_ENV=production",
     "build": "npm run 11ty:prod && npm run css:prod"
