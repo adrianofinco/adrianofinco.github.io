@@ -1,24 +1,36 @@
-isDevelopment = require('./devenv.js');
+const colors = require('tailwindcss/colors')
 
 module.exports = {
+  mode: 'jit',
   purge: {
     mode: 'all',
     preserveHtmlElements: false,
-    content: ['_site/**/*.html'],
-    enabled: !isDevelopment,
+    enabled: process.env.NODE_ENV == 'production',
+    content: ['_site/**/*.html', '_site/**/*.js'],
     options: {
       safelist: [],
     }
   },
+  darkMode: false,
   theme: {
-    container: {
-      center: true,
-      padding: '1.5rem'
-    },
     extend: {
       colors: {
-        dimgrey: "#777777",
-        lightgrey: "#444444"
+        'gray': colors.trueGray,
+        'black': {
+          100: '#888',
+          200: '#777',
+          300: '#666',
+          400: '#555',
+          500: '#444',
+          600: '#333',
+          700: '#333',
+          800: '#222',
+          900: '#111',
+          DEFAULT: '#000'
+        },
+      },
+      spacing: {
+        'unset': 'unset'
       },
       fontFamily: {
         sans: ['Nunito', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
@@ -27,4 +39,4 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-};
+}

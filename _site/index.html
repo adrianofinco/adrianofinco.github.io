@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adriano Lourenço</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div id="root" class="" >
+    <div class="font-sans antialiased">
+      <nav class="z-30 fixed top-0 w-full px-2 py-2 text-black-900 flex md:px-4 items-center">
+        <h1 class="invisible font-bold font-mono tracking-wider text-2xl md:visible uppercase flex-grow">Adriano</h1>
+        <button id="btn-open-menu">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+        <div id="nav-menu" class="z-40 absolute top-0 left-0 w-full h-screen bg-black-900 text-white flex flex-col text-3xl items-center gap-8 pt-16 transform transition-transform translate-x-full duration-300">
+          <a href="/" class="hover:text-blue-500 hover:underline transition-colors duration-100">Trabalhos</a>
+          <a href="/sobre/" class="hover:text-blue-500 hover:underline transition-colors duration-100">Sobre mim</a>
+          <a href="/resume.pdf" class="hidden hover:text-blue-500 hover:underline transition-colors duration-100">Currículo</a>
+          <button id="btn-close-menu" class="absolute top-3 right-4">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+      </nav>
+      <header class="min-h-screen bg-black-900 text-white flex items-center px-8 sm:px-16">
+        <div class="lg:ml-16">
+          <h1 class="text-xs sm:text-sm md:text-base lg:text-xl uppercase mb-2 text-gray-300 font-mono tracking-wider lg:tracking-widest">Adriano Lourenço</h1>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+            <span class="text-green-400">Desenvolvedor Web</span> 
+            <span class="hidden sm:inline">& 
+              <span class="text-pink-400">Estudante</span>
+            </span> <br class="hidden md:block">com uma 
+            <span class="text-red-500">paixão</span> por trabalho
+            <span class="text-yellow-400">criativo</span>
+          </h2>
+        </div>
+        <a href="#projects" class="z-10 absolute bottom-5 left-0 text-sm sm:text-base hover:text-blue-400 mx-8 sm:mx-16 lg:ml-32">
+          <span class="align-text-bottom">↓</span> descer
+        </a>
+      </header>
+      <main id="projects" class="min-h-screen bg-gray-200 py-12 text-black-900">
+        <h1 class="font-mono border-b border-black-900 mb-4 mx-8 sm:mx-16 lg:mx-32 pb-1 text-xl font-bold">Websites</h1>
+
+        <div class="website-list mx-8 sm:mx-16 lg:mx-32 tracking-wide grid-custom">
+          
+          <!-- Website -->
+          <div class="pb-8">
+            <h2 class="text-2xl text-center font-bold">Task Organizer</h2>
+            <figure class="overflow-hidden mb-4 flex justify-center">
+              <img 
+              data-mobile="https://source.unsplash.com/random/281x500" 
+              data-tablet="https://source.unsplash.com/random/375x500" 
+              data-desktop="https://source.unsplash.com/random/889x500"
+              class="rounded-xl border border-black-900" >
+            </figure>
+            <div class="text-center mb-3 hidden sm:block">
+              <button data-resolution="mobile" title="Smartphone" class="outline-none focus:border-2 border-black-900 hover:bg-purple-800 hover:text-gray-200 rounded-full p-1 transform hover:scale-125 transition-transform duration-200">
+                <svg class="h-6 w-6 inline"><use href="#mobile-icon"></use></svg>
+              </button>
+              <button data-resolution="tablet" title="Tablet" class="outline-none focus:border-2 border-black-900 hover:bg-purple-800 hover:text-gray-200 rounded-full p-1 transform hover:scale-125 transition-transform duration-200">
+                <svg class="h-6 w-6 inline"><use href="#tablet-icon"></use></svg>
+              </button>
+              <button data-resolution="desktop" title="Desktop" class="outline-none focus:border-2 border-black-900 hover:bg-purple-800 hover:text-gray-200 rounded-full p-1 transform hover:scale-125 transition-transform duration-200">
+                <svg class="h-6 w-6 inline"><use href="#desktop-icon"></use></svg>
+              </button>
+            </div>
+            <p class="leading-5 text-lg mx-3 md:max-w-lg md:mx-auto sm:text-lg sm:leading-5 lg:text-xl">
+              Um aplicativo web progressivo (PWA) para gerenciar uma lista de tarefas, com suporte para uso offline incluindo armazenamento local das tarefas.
+            </p>
+            <div class="mt-4 flex justify-center gap-4">
+              <a href="https://github.com/adrianofinco/vue-todo-pwa" target="_blank" class="hover:text-purple-800 font-bold text-lg">
+                <svg class="inline h-6 w-6 align-text-bottom"><use href="#code-icon"></use></svg>
+                <span>Código</span>
+              </a>
+              <a href="https://adrianofinco.github.io/vue-todo-pwa/" target="_blank" class="hover:text-purple-800 font-bold text-lg">
+                <svg class="inline h-6 w-6 align-text-bottom"><use href="#eye-icon"></use></svg>
+                <span>Visitar</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="pb-8">
+            <h2 class="text-2xl text-center font-bold">Username check</h2>
+            <figure class="overflow-hidden mb-4 flex justify-center">
+              <img 
+              data-mobile="https://source.unsplash.com/random/281x500" 
+              data-tablet="https://source.unsplash.com/random/375x500" 
+              data-desktop="https://source.unsplash.com/random/889x500"
+              class="rounded-xl border border-black-900" >
+            </figure>
+            <div class="text-center mb-3 hidden sm:block">
+              <button data-resolution="mobile" title="Smartphone" class="outline-none focus:border-2 border-black-900 hover:bg-purple-800 hover:text-gray-200 rounded-full p-1 transform hover:scale-125 transition-transform duration-200">
+                <svg class="h-6 w-6 inline"><use href="#mobile-icon"></use></svg>
+              </button>
+              <button data-resolution="tablet" title="Tablet" class="outline-none focus:border-2 border-black-900 hover:bg-purple-800 hover:text-gray-200 rounded-full p-1 transform hover:scale-125 transition-transform duration-200">
+                <svg class="h-6 w-6 inline"><use href="#tablet-icon"></use></svg>
+              </button>
+              <button data-resolution="desktop" title="Desktop" class="outline-none focus:border-2 border-black-900 hover:bg-purple-800 hover:text-gray-200 rounded-full p-1 transform hover:scale-125 transition-transform duration-200">
+                <svg class="h-6 w-6 inline"><use href="#desktop-icon"></use></svg>
+              </button>
+            </div>
+            <p class="leading-5 text-lg mx-3 max-w-lg lg:mx-auto sm:text-lg sm:leading-5 lg:text-xl">
+              Um aplicativo web que permite a checagem da disponibilidade de um nome de usuário através de diversos websites como Instagram, Facebook, Github, Twitter e muitos mais.
+            </p>
+            <div class="mt-4 flex justify-center gap-4">
+              <a href="https://github.com/adrianofinco/usernamecheck-webapp" target="_blank" class="hover:text-purple-800 font-bold text-lg">
+                <svg class="inline h-6 w-6 align-text-bottom"><use href="#code-icon"></use></svg>
+                <span>Código</span>
+              </a>
+              <a href="https://usernamecheck.herokuapp.com/" target="_blank" class="hover:text-purple-800 font-bold text-lg">
+                <svg class="inline h-6 w-6 align-text-bottom"><use href="#eye-icon"></use></svg>
+                <span>Visitar</span>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+
+        <h1 class="font-mono border-b border-black-900 mb-4 mx-8 sm:mx-16 lg:mx-32 pb-1 text-xl font-bold">Bibliotecas</h1>
+        <div class="library-list mx-8 sm:mx-16 lg:mx-32 tracking-wide grid-custom2 gap-3">
+
+          <!-- Biblioteca -->
+          <div class="pb-8 py-8 border border-black-900 rounded-lg min-w-full">
+            <h2 class="text-2xl text-center font-bold">Rollstack</h2>
+            <p class="leading-5 text-lg mx-3 sm:text-lg sm:leading-5 lg:text-xl mt-4">
+              Um biblioteca Javascript isomórfica que utiliza o algoritmo simple-fast-counter-32 para gerar dados aleatórios incluindo números inteiros entre intervalos arbitrários e texto com tamanho configurável.
+            </p>
+            <div class="mt-4 flex justify-center gap-4">
+              <a href="https://github.com/adrianofinco/rollstack" target="_blank" class="hover:text-purple-800 font-bold text-lg">
+                <svg class="inline h-6 w-6 align-text-bottom"><use href="#code-icon"></use></svg>
+                <span>Código</span>
+              </a>
+              <a href="https://www.npmjs.com/package/rollstack" target="_blank" class="hover:text-purple-800 font-bold text-lg">
+                <svg class="inline h-6 w-6 align-text-bottom"><use href="#repo-icon"></use></svg>
+                <span>Repositório</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="bg-black-900 text-white px-8 sm:px-16 pt-12 pb-8 tracking-wide">
+        <div class="lg:ml-16 sm:text-lg flex flex-col md:flex-row">
+          <div class="mb-6 md:mr-16">
+            <p class="text-gray-400 font-bold ">Quer entrar em contato?</p>
+            <p>
+              <a href="mailto:adriano.finco.509@gmail.com" class="hover:text-blue-500 hover:underline">adriano.finco.509@gmail.com</a>
+            </p>
+            <p>
+              <a href="https://github.com/adrianofinco" target="_blank" class="hover:text-blue-500 hover:underline">Github: adrianofinco</a>
+            </p>
+            <p>
+              <a href="https://linkedin.com/in/adriano-lourenço" target="_blank" class="hover:text-blue-500 hover:underline">LinkedIn: adriano-lourenço</a>
+            </p>
+          </div>
+          <div class="mb-6 hidden">
+            <p class="text-gray-400 font-bold ">Procurando outro idioma?</p>
+            <p>
+              <a href="/" class="hover:text-blue-500 hover:underline tracking-wider">English</a>
+            </p>
+            <p>
+              <a href="/pt/" class="text-gray-400 hover:underline tracking-wider">Português</a>
+            </p>
+          </div>        
+        </div>
+        <div class="lg:ml-16">
+          <p class=" text-gray-400 w-full md:ext-center font-bold">
+            Website feito por mim com 
+            <span class="text-red-500 cursor-help" title="Amor" aria-label="amor">❤️</span>.
+          </p>
+        </div>
+      </footer>
+      <svg class="hidden">
+        <defs>
+          <g id="code-icon" class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </g>
+          <g id="eye-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+          </g>
+          <g id="mobile-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </g>
+          <g id="tablet-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </g>
+          <g id="desktop-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </g>
+          <g id="repo-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+          </g>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

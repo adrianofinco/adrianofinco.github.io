@@ -1,22 +1,8 @@
 const tailwind = require('tailwindcss');
 const cssnano = require('cssnano');
 
-isDevelopment = require('./devenv.js');
-
-if (isDevelopment) {
-  postCSSplugins = [
-    tailwind
-  ]
-} else {
-  postCSSplugins = [
-    tailwind,
-    cssnano({
-      preset: 'default',
-      discardComments: {removeAll: true}
-    })
-  ]
-}
-
 module.exports = {
-  plugins: postCSSplugins,
+  plugins: process.env.NODE_ENV == 'production'
+            ? [tailwind, cssnano({ preset: 'default', discardComments: {removeAll: true} })] 
+            : [tailwind]
 }
