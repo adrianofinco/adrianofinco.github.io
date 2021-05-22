@@ -4,8 +4,8 @@
   "description": "My portfolio website",
   "private": true,
   "scripts": {
-    "dev": "set TAILWIND_MODE=watch && set NODE_ENV=development && postcss tailwind.css -o ./_site/app.css -w",
-    "build": "set TAILWIND_MODE=build && set NODE_ENV=production && postcss tailwind.css -o ./_site/app.css"
+    "dev": "set \"TAILWIND_MODE=watch\" & set \"NODE_ENV=development\" & postcss tailwind.css -o ./_site/app.css -w",
+    "build": "set \"TAILWIND_MODE=build\" & set \"NODE_ENV=production\" & postcss tailwind.css -o ./_site/app.css"
   },
   "repository": {
     "type": "git",
