@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adriano Lourenço</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div id="root" class="" >
+    <div class="font-sans antialiased">
+      <nav class="z-30 fixed top-0 w-full px-2 py-2 text-black-900 flex md:px-4 items-center">
+        <h1 class="invisible font-bold font-mono tracking-wider text-2xl md:visible uppercase flex-grow">Adriano</h1>
+        <button id="btn-open-menu">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+        <div id="nav-menu" class="z-40 absolute top-0 left-0 w-full h-screen bg-black-900 text-white flex flex-col text-3xl items-center gap-8 pt-16 transform transition-transform translate-x-full duration-300">
+          <a href="/" class="hover:text-blue-500 hover:underline transition-colors duration-100">Trabalhos</a>
+          <a href="/sobre/" class="hover:text-blue-500 hover:underline transition-colors duration-100">Sobre mim</a>
+          <a href="/resume.pdf"" class="hidden hover:text-blue-500 hover:underline transition-colors duration-100">Currículo</a>
+          <button id="btn-close-menu" class="absolute top-3 right-4" >
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+      </nav>
+      <main class="min-h-screen bg-gray-200 py-24 text-black-900 mx-auto px-4">
+        
+        <section class="text-lg max-w-2xl mx-auto">
+          <h2 class="text-3xl mb-2 lg:mb-4">Oi, Sou o Adriano</h2>
+          <p class="text-lg text-gray-800 font-mono mb-2 lg:mb-4">/aad•ree•aa•no/</p>
+          <section>
+            <p class="mb-2 indent">
+              Sou um <b class="text-green-900">Desenvolvedor Web</b> 
+              e <b class="text-purple-800">Estudante</b> 
+              de São Paulo com uma paixão por trabalho criativo e projetos desafiadores.
+              Quando não estou programando, pode me encontrar ilustrando, jogando video games e 
+              <span class="border-dotted border-b border-black-900 cursor-help" title="Eu me aventuro escrevendo ficção de vez em quando">escrevendo</span>.
+            </p>
+            <p class="mb-2 indent">
+              Acredito que todo projeto é uma oportunidade de aprender, e com uma abordagem de <b class="text-blue-900">solução de problemas</b> 
+              e uma forte <b class="text-blue-900">mentalidade de crescimento</b>,
+              minha intenção é de evoluir como profissional e pessoa
+              e ao mesmo tempo <b class="text-blue-900">criar experiências inovadores</b> 
+              para meus usuários.
+            </p>
+            <p class="mb-2 indent">
+              Curioso pra saber mais? sinta-se livre para me enviar um e-mail 
+              (<a href="mailto:adriano.finco.509@gmail.com" target="_blank" class="text-blue-900 hover:underline">adriano.finco.509@gmail.com</a>) 
+              ou mandar mensagem pelo 
+              <a href="https://linkedin.com/in/adriano-lourenço" target="_blank" class="text-blue-900 hover:underline">LinkedIn</a>.
+              Você pode ver mais do meu trabalho 
+              <a href="/" class="text-blue-900 hover:underline">aqui<a/> ou no meu 
+              <a href="https://github.com/adrianofinco" target="_blank" class="text-blue-900 hover:underline">Github</a>.
+            </p>
+          </section>
+        </section>
+
+      </main>
+      <footer class="bg-black-900 text-white px-8 sm:px-16 pt-12 pb-8 tracking-wide">
+        <div class="lg:ml-16 sm:text-lg flex flex-col md:flex-row">
+          <div class="mb-6 md:mr-16">
+            <p class="text-gray-400 font-bold ">Quer entrar em contato?</p>
+            <p>
+              <a href="mailto:adriano.finco.509@gmail.com" class="hover:text-blue-500 hover:underline">adriano.finco.509@gmail.com</a>
+            </p>
+            <p>
+              <a href="https://github.com/adrianofinco" target="_blank" class="hover:text-blue-500 hover:underline">Github: adrianofinco</a>
+            </p>
+            <p>
+              <a href="https://linkedin.com/in/adriano-lourenço" target="_blank" class="hover:text-blue-500 hover:underline">LinkedIn: adriano-lourenço</a>
+            </p>
+          </div>
+          <div class="mb-6 hidden">
+            <p class="text-gray-400 font-bold ">Procurando outro idioma?</p>
+            <p>
+              <a href="/" class="hover:text-blue-500 hover:underline tracking-wider">English</a>
+            </p>
+            <p>
+              <a href="/pt/" class="text-gray-400 hover:underline tracking-wider">Português</a>
+            </p>
+          </div>        
+        </div>
+        <div class="lg:ml-16">
+          <p class=" text-gray-400 w-full md:ext-center font-bold">
+            Website feito por mim com 
+            <span class="text-red-500 cursor-help" title="Amor" aria-label="amor">❤️</span>.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
